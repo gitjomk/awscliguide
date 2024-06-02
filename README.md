@@ -30,7 +30,7 @@ aws ec2 attach-internet-gateway --vpc-id vpc-xxxxxxxxxxxxxx --internet-gateway-i
 aws ec2 create-subnet --vpc-id vpc-xxxxxxxxxxxxxxxx --availability-zone us-east-1a --cidr-block 20.0.0.0/24 --region us-east-1
 
 # Create a tag for the public subnet
- aws ec2 create-tags --resources subnet-xxxxxxxxxxxxx --tags Key=Name,Value=awscli-pubsubA --region us-east-1
+aws ec2 create-tags --resources subnet-xxxxxxxxxxxxx --tags Key=Name,Value=awscli-pubsubA --region us-east-1
 
 # Check the changes in the created subnet
 aws ec2 describe-subnets --subnet-id subnet-xxxxxxxxxxxxx --region us-east-1
@@ -40,7 +40,7 @@ aws ec2 describe-subnets --subnet-id subnet-xxxxxxxxxxxxx --region us-east-1
 aws ec2 create-route-table --vpc-id vpc-xxxxxxxxxxxxxx --region us-east-1
 
 # Create a tag for the public route
- aws ec2 create-tags --resources rtb-xxxxxxxxxxxxx --tags Key=Name,Value=awscli-pubrtb1
+aws ec2 create-tags --resources rtb-xxxxxxxxxxxxx --tags Key=Name,Value=awscli-pubrtb1
 
 # Create a route in a routing table for the default route 0.0.0.0/0 to use Internet Gateway as a gateway
 aws ec2 create-route --route-table-ids rtb-xxxxxxxxxxxxx --destination-cidr-block "0.0.0.0/0" --gateway-id igw-xxxxxxxxxxxxx --region us-east-1
