@@ -37,6 +37,7 @@ aws ec2 describe-subnets --subnet-id subnet-xxxxxxxxxxxxx --region us-east-1
 
 # Create a routing table for the public subnet
 #aws ec2 create-route-table --vpc-id [vpc id] --region [region name]
+
 aws ec2 create-route-table --vpc-id vpc-xxxxxxxxxxxxxx --region us-east-1
 
 # Create a tag for the public route
